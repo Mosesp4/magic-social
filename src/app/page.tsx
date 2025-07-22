@@ -4,6 +4,8 @@ import { Logo } from "@/components/logo";
 import Link from "next/link";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import TestimonialsSection from "@/components/Testimonials";
+import AppFooter from "@/components/Footer";
 
 export default function Home() {
   const { userId } = auth();
@@ -77,9 +79,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+             
             </div>
+             <TestimonialsSection/>
           </div>
+
         </section>
+         <AppFooter />
       </main>
     </div>
   );
